@@ -12,7 +12,8 @@
     "build:dist": "rm -rf dist; ./node_modules/.bin/webpack --config webpack.config.js --mode=development",
     "build:es5": "rm -rf lib; ./node_modules/.bin/babel src -d lib",
     "build": "npm run build:es5; npm run build:dist;",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "postinstall": "npm run build"
   },
   "eslintConfig": {
     "root": true,
